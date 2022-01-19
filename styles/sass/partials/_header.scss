@@ -1,0 +1,26 @@
+header {
+  /*What to do if your image is spilling out?*/
+  display: flex;
+  align-items: center;
+  background-color: $tertiary;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+  .headerImgContainer {
+    width: 45%;
+    img {
+      // Images don't just fill their containers as a default -- they have a default size.
+      max-width: 100%;
+      // don't break the container plz
+      vertical-align: middle;
+      // this ensures that our picture is aligned in the middle in case
+    }
+  }
+  .headerContent {
+    width: 55%;
+    color: $primary;
+    .contentContainer {
+      width: 65%;
+      margin: 0 auto;
+    }
+  }
+}
