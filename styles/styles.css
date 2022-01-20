@@ -616,18 +616,21 @@ main section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .productImgContainer {
-  width: 30%;
+  width: 33.33%;
   text-align: center;
 }
 .productImgContainer img {
-  width: calc(100% - 48px);
-  margin: 24px;
   border-radius: 5%;
+  margin: 24px;
+  width: calc(100% - 48px);
 }
 
 .play {
@@ -644,9 +647,6 @@ main section {
 }
 .play .playContainer {
   max-width: 650px;
-  background-color: #fff;
-  border: 24px solid #f4fcff;
-  padding: 70px 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,45 +657,64 @@ main section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 70px 45px;
+  border: 24px solid #f4fcff;
+  background-color: #fff;
 }
 
 .categoryGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
   width: 100%;
 }
 .categoryGallery .items {
   padding: 45px;
-  width: 40%;
   margin: 50px 25px 25px;
   border-radius: 10%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .categoryGallery .items img {
   width: 100%;
   border-radius: 10%;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
 }
-.categoryGallery .items:hover, .categoryGallery .items:focus {
+.categoryGallery .items:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
-.categoryGallery .orange {
+.categoryGallery .items:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.categoryGallery .itemOne {
   background-color: #ffd698;
 }
-.categoryGallery .blue {
+.categoryGallery .itemTwo {
   background-color: #f4fcff;
 }
-.categoryGallery .green {
+.categoryGallery .itemThree {
   background-color: #f8fbf3;
 }
-.categoryGallery .pink {
+.categoryGallery .itemFour {
   background-color: #fff5f5;
 }
 
@@ -704,21 +723,86 @@ main section {
   padding: 90px 0;
   margin: 0;
 }
-.gallery .galleryItems {
+.gallery h2 {
+  max-width: 500px;
+}
+
+.galleryItems {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.galleryItems .item {
+  width: 15%;
+}
+.galleryItems .item img {
+  width: 100%;
+  display: block;
+}
+
+/* Shop Page Sections */
+.shop section {
+  padding: 90px 0;
+  margin: 0;
+}
+
+.inventory h2 {
+  text-align: center;
+}
+.inventory .product {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.inventory .product a {
+  display: block;
+}
+.inventory .product a:hover {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+.inventory .product a:focus {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+
+.guarantees {
+  background-color: #fff5f5;
+  position: relative;
+}
+.guarantees::before {
+  content: "";
+  background-image: url(../assets/wave-3.svg);
+  background-position: top center;
+  background-color: #fff5f5;
+  position: absolute;
+  background-size: 100% 60px;
+  top: -60px;
+  height: 3rem;
+  left: 0;
+  right: 0;
+}
+
+.shopOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.gallery .galleryItems .item {
-  width: 15%;
-}
-.gallery .galleryItems .item img {
-  width: 100%;
+
+.guaranteeContainer {
+  width: calc(25% - 30px);
+  margin: 0 15px;
 }
 
 footer {
